@@ -55,13 +55,6 @@ exit(-1);
 }
  
  printf("SERVIDOR EN ESPERA...\n");
- longitud_cliente= sizeof(struct sockaddr_in);
- if ((fd2 = accept(fd,(struct sockaddr *)&client,&longitud_cliente))==-1) {
- printf("error en accept()\n");
- exit(-1);
- }
-
-
  
  //El cliente recibe el mensaje del servidor
  send(fd2,"Bienvenido a mi servidor.\n",26,0);
